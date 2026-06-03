@@ -15,6 +15,7 @@ Son la base visual principal para LinkedIn, la PPT y cualquier post del proyecto
 | **Abrir galería** | [Cursor Madrid Hackathon #3 — Ekitaldi](https://www.ekitaldi.org/gallery/cmpxqrwsb0000141ipeqptui7?referrer=luma&utm_source=luma) |
 | **Fotos** | 103 imágenes en alta resolución |
 | **Portada de la galería** | `DSC00856.JPG` |
+| **Organización del hackathon** | Juan Mugica · Felipe Basurto Barrio · Xuban Ceccon |
 
 > Si en tu red no cargan las miniaturas (bloqueo puntual del CDN de fotos), abre el enlace en otro momento, con datos móviles o VPN. Las URLs de descarga directa siguen siendo válidas.
 
@@ -40,9 +41,9 @@ https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00864.JPG
 
 ### 3.er puesto — el momento del podio (`DSC00941`)
 
-Cuando nos dieron el **3.º puesto**: **Max**, **Dingli Ni Xu** y alguien del equipo de **organización** del hackathon.
+Cuando nos dieron el **3.º puesto**: **Max**, **Dingli Ni Xu** y **Felipe Basurto Barrio** (organización).
 
-![3.er puesto — Max, Dingli Ni Xu y organización](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/thumbs/DSC00941.JPG.webp)
+![3.er puesto — Max, Dingli Ni Xu y Felipe](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/thumbs/DSC00941.JPG.webp)
 
 **Descarga en alta calidad:**  
 https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00941.JPG
@@ -65,7 +66,7 @@ https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00963.JPG
 | Momento | Foto | Qué muestra |
 |---------|------|-------------|
 | **Demo en el stand** | `DSC00864` | Max explica · Dingli Ni Xu juega |
-| **3.º puesto** | `DSC00941` | Max, Dingli Ni Xu + organización |
+| **3.º puesto** | `DSC00941` | Max, Dingli Ni Xu + Felipe Basurto Barrio |
 | **Fin del evento** | `DSC00963` | Max + Dingli Ni Xu |
 
 ### Mosaico del ambiente del evento
@@ -85,7 +86,7 @@ La foto clave del stand es **`DSC00864`** (demo en vivo). El resto del mosaico r
 - [DSC00755.JPG](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00755.JPG)
 - [DSC00861.JPG](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00861.JPG)
 - [**DSC00864.JPG**](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00864.JPG) *(**demo en el stand** — Max explica, Dingli Ni Xu juega)*
-- [**DSC00941.JPG**](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00941.JPG) *(**3.º puesto** — Max, Dingli Ni Xu + organización)*
+- [**DSC00941.JPG**](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00941.JPG) *(**3.º puesto** — Max, Dingli Ni Xu + Felipe Basurto Barrio)*
 - [**DSC00963.JPG**](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00963.JPG) *(**fin del evento** — Max + Dingli Ni Xu)*
 - [DSC00972.JPG](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00972.JPG) *(cierre del reportaje)*
 
@@ -103,7 +104,7 @@ La foto clave del stand es **`DSC00864`** (demo en vivo). El resto del mosaico r
 
 Queremos dar las gracias de corazón a **Cursor Community Madrid** por organizar el **Hackathon #3**: ambiente, energía y gente con ganas de construir en serio — y por dejarnos **este reportaje fotográfico** del evento.
 
-Un agradecimiento especial a **Xuban** por el apoyo, la orientación y el empujón durante el reto.
+Un agradecimiento especial al equipo organizador — **Juan Mugica**, **Felipe Basurto Barrio** y **Xuban Ceccon** — por montar el evento, acompañarnos en el stand y el empujón durante el reto (en la foto del podio, [`DSC00941`](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00941.JPG), nos acompaña **Felipe**).
 
 El evento ha estado **muy guay**: pocas horas, mucha intensidad y proyectos que se podían probar en directo. Nos fuimos con la sensación de haber aprendido, reído y entregado algo que la gente disfrutó.
 
@@ -111,7 +112,7 @@ El evento ha estado **muy guay**: pocas horas, mucha intensidad y proyectos que 
 
 En el stand la dinámica era clara: **Max** presentaba, **Dingli Ni Xu** enseñaba jugando — tal como en [`DSC00864`](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00864.JPG).
 
-**Resultado:** quedamos **3.º** en el hackathon — [`DSC00941`](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00941.JPG) (podio con organización). Cerramos el día con [`DSC00963`](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00963.JPG).
+**Resultado:** quedamos **3.º** en el hackathon — [`DSC00941`](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00941.JPG) (Max, Dingli Ni Xu y Felipe Basurto Barrio). Cerramos el día con [`DSC00963`](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00963.JPG).
 
 A todo el que se acercó a probar **MEME NINJA**: **gracias por ser tan participativos** — pedir la cámara, jugar rondas, gritar cuando salía un meme malo en rojo y animar el leaderboard nos hizo el día.
 
@@ -143,12 +144,12 @@ Fruit Ninja + memes + tu mano en cámara.
 Construimos un arcade en el que cortas emotes de Twitch como si fueran frutas: los buenos suman puntos, los rojos te quitan vidas. La cámara sigue tu muñeca y el juego reacciona al instante.
 
 🏅 Quedamos 3.º en el evento — equipo: Max + Dingli Ni Xu.
-Gracias a Cursor Community Madrid y a Xuban — el hackathon estuvo muy guay y la gente del stand se lo pasó genial probándolo.
+Gracias a Cursor Community Madrid y a Juan, Felipe y Xuban (organización) — el hackathon estuvo muy guay y la gente del stand se lo pasó genial probándolo.
 
 📸 Demo en el stand (Max explica, Dingli juega):
 https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00864.JPG
 
-📸 3.er puesto (Max, Dingli Ni Xu + organización):
+📸 3.er puesto (Max, Dingli Ni Xu + Felipe Basurto Barrio):
 https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00941.JPG
 
 📸 Equipo al cerrar el evento:
@@ -179,7 +180,7 @@ Lo mejor del evento no fue solo el código: fue ver a desconocidos pedir turno, 
 🏅 Resultado del hackathon: 3.º puesto.
 📸 Momento del podio: https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00941.JPG
 
-🙏 Gracias a Cursor Community Madrid y a Xuban por el evento (estuvo muy guay) y por el ambiente.
+🙏 Gracias a Cursor Community Madrid y a Juan Mugica, Felipe Basurto Barrio y Xuban Ceccon por el evento (estuvo muy guay) y por el ambiente.
 
 📷 Galería oficial del hackathon — más de 100 fotos del día:
 https://www.ekitaldi.org/gallery/cmpxqrwsb0000141ipeqptui7
@@ -324,7 +325,7 @@ https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00864.JPG
 - Récord: **Max — 7.600**  
 - Juega: **meme-ninja.dowi.es**
 
-**Imagen:** **`DSC00941.JPG`** a pantalla completa — momento del **3.º puesto** (Max, Dingli Ni Xu y organización).  
+**Imagen:** **`DSC00941.JPG`** a pantalla completa — momento del **3.º puesto** (Max, Dingli Ni Xu y Felipe Basurto Barrio).  
 Pie de foto: “3.º puesto · MEME NINJA”. Añadir QR o URL **meme-ninja.dowi.es** en una esquina.
 
 https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00941.JPG
@@ -336,7 +337,7 @@ https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00941.JPG
 **Texto:**
 - **Max** y **Dingli Ni Xu** — equipo MEME NINJA  
 - **Cursor Community Madrid** — Hackathon #3 y galería de fotos  
-- **Xuban** — apoyo en el evento  
+- **Juan Mugica**, **Felipe Basurto Barrio** y **Xuban Ceccon** — organización del hackathon  
 - **Jugadores y público** — por participar en el stand  
 - “El evento estuvo **muy guay**.”
 
@@ -368,7 +369,7 @@ Enlace en pequeño: galería oficial.
 | 5 Arquitectura | Ambiente tech | `DSC00755` |
 | 6 Tech | Venue / comunidad | `DSC00861` |
 | 7 Detalles | — | Captura web |
-| 8 Resultado | **3.º puesto** | **`DSC00941`** (Max, Dingli Ni Xu + organización) |
+| 8 Resultado | **3.º puesto** | **`DSC00941`** (Max, Dingli Ni Xu + Felipe) |
 | 9 Gracias | Equipo al cierre | **`DSC00963`** |
 | 10 Cierre | Equipo + CTA juego | **`DSC00963`** (+ opcional mini `DSC00941`) |
 
@@ -391,7 +392,7 @@ La cámara se usa en el navegador para jugar; el backend procesa frames para det
 | Repositorio | https://github.com/maxprain12/hackathon-fruitninja |
 | Portada HD | https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00856.JPG |
 | **Demo en el stand (Max + Dingli Ni Xu)** | https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00864.JPG |
-| **3.º puesto (Max, Dingli Ni Xu + organización)** | https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00941.JPG |
+| **3.º puesto (Max, Dingli Ni Xu + Felipe Basurto Barrio)** | https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00941.JPG |
 | **Equipo al cierre (Max + Dingli Ni Xu)** | https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00963.JPG |
 
 ---
