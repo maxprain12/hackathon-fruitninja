@@ -25,16 +25,34 @@ Son la base visual principal para LinkedIn, la PPT y cualquier post del proyecto
 **Descarga en alta calidad:**  
 https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00856.JPG
 
-### El equipo al finalizar el evento (foto principal del proyecto)
+### 3.er puesto — el momento del podio (`DSC00941`)
 
-**Max** y **Dingli Ni Xu** — equipo MEME NINJA — al cierre del Hackathon #3.
+Cuando nos dieron el **3.º puesto**: **Max**, **Dingli Ni Xu** y alguien del equipo de **organización** del hackathon.
+
+![3.er puesto — Max, Dingli Ni Xu y organización](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/thumbs/DSC00941.JPG.webp)
+
+**Descarga en alta calidad:**  
+https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00941.JPG
+
+**Usar en:** slide **8 (resultado / podio)**, **primera foto del carrusel en LinkedIn**, posts donde destaquéis el puesto.
+
+---
+
+### El equipo al finalizar el evento (`DSC00963`)
+
+**Max** y **Dingli Ni Xu** — equipo MEME NINJA — al cierre del Hackathon #3 (foto de vosotros dos).
 
 ![Max y Dingli Ni Xu al finalizar Cursor Madrid Hackathon #3](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/thumbs/DSC00963.JPG.webp)
 
 **Descarga en alta calidad:**  
 https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00963.JPG
 
-Usad esta foto en **LinkedIn** (carrusel o imagen principal), en las slides **8 (resultado)**, **9 (agradecimientos)** y **10 (cierre)** de la PPT.
+**Usar en:** slides **9 (agradecimientos)** y **10 (cierre)**, segunda imagen del carrusel en LinkedIn.
+
+| Momento | Foto | Quién sale |
+|---------|------|------------|
+| **3.º puesto** | `DSC00941` | Max, Dingli Ni Xu + organización |
+| **Fin del evento** | `DSC00963` | Max + Dingli Ni Xu |
 
 ### Mosaico del ambiente del evento
 
@@ -44,7 +62,7 @@ De referencia, estas capturas reparten el día (inicio → mitad → cierre):
 | | | |
 |:---:|:---:|:---:|
 | ![DSC00616](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/thumbs/DSC00616.JPG.webp) | ![DSC00661](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/thumbs/DSC00661.JPG.webp) | ![DSC00686](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/thumbs/DSC00686.JPG.webp) |
-| ![DSC00755](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/thumbs/DSC00755.JPG.webp) | ![DSC00861](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/thumbs/DSC00861.JPG.webp) | ![DSC00963 — equipo](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/thumbs/DSC00963.JPG.webp) |
+| ![DSC00755](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/thumbs/DSC00755.JPG.webp) | ![DSC00941 — 3.º puesto](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/thumbs/DSC00941.JPG.webp) | ![DSC00963 — cierre](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/thumbs/DSC00963.JPG.webp) |
 
 **Enlaces HD** (arrastrar a PowerPoint o “Insertar imagen”):
 
@@ -53,8 +71,8 @@ De referencia, estas capturas reparten el día (inicio → mitad → cierre):
 - [DSC00686.JPG](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00686.JPG)
 - [DSC00755.JPG](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00755.JPG)
 - [DSC00861.JPG](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00861.JPG)
-- [DSC00941.JPG](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00941.JPG)
-- [**DSC00963.JPG**](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00963.JPG) *(**Max + Dingli Ni Xu**, al finalizar el evento)*
+- [**DSC00941.JPG**](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00941.JPG) *(**3.º puesto** — Max, Dingli Ni Xu + organización)*
+- [**DSC00963.JPG**](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00963.JPG) *(**fin del evento** — Max + Dingli Ni Xu)*
 - [DSC00972.JPG](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00972.JPG) *(cierre del reportaje)*
 
 **Complemento opcional:** 1 captura de **https://meme-ninja.dowi.es** (puntuación o leaderboard con récord **Max — 7.600**) para la slide del reto.
@@ -77,7 +95,7 @@ El evento ha estado **muy guay**: pocas horas, mucha intensidad y proyectos que 
 
 **Equipo:** **Max** y **Dingli Ni Xu** construyeron MEME NINJA juntos en el hackathon.
 
-**Resultado:** quedamos **3.º** en el hackathon. Para el equipo ha sido un orgullo ver que la idea enganchaba en el stand — y cerrar el día con la foto oficial del final del evento ([`DSC00963`](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00963.JPG)).
+**Resultado:** quedamos **3.º** en el hackathon — momento capturado en [`DSC00941`](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00941.JPG) (Max, Dingli Ni Xu y la organización). Para el equipo ha sido un orgullo ver que la idea enganchaba en el stand y cerrar el día con [`DSC00963`](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00963.JPG).
 
 A todo el que se acercó a probar **MEME NINJA**: **gracias por ser tan participativos** — pedir la cámara, jugar rondas, gritar cuando salía un meme malo en rojo y animar el leaderboard nos hizo el día.
 
@@ -111,7 +129,10 @@ Construimos un arcade en el que cortas emotes de Twitch como si fueran frutas: l
 🏅 Quedamos 3.º en el evento — equipo: Max + Dingli Ni Xu.
 Gracias a Cursor Community Madrid y a Xuban — el hackathon estuvo muy guay y la gente del stand se lo pasó genial probándolo.
 
-📸 Foto del equipo al cerrar el evento:
+📸 3.er puesto (Max, Dingli Ni Xu + organización):
+https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00941.JPG
+
+📸 Equipo al cerrar el evento:
 https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00963.JPG
 
 📸 Galería completa (103 fotos):
@@ -135,6 +156,8 @@ Te pones delante de la cámara, mueves la mano y una estela tipo sable corta emo
 Lo mejor del evento no fue solo el código: fue ver a desconocidos pedir turno, jugar, reír cuando cortaban un meme bomba y mirar el ranking. Gracias a todos los que fueron tan participativos en nuestro stand.
 
 🏅 Resultado del hackathon: 3.º puesto.
+📸 Momento del podio: https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00941.JPG
+
 🙏 Gracias a Cursor Community Madrid y a Xuban por el evento (estuvo muy guay) y por el ambiente.
 
 📷 Galería oficial del hackathon — más de 100 fotos del día:
@@ -152,8 +175,8 @@ Max + Dingli Ni Xu · MEME NINJA · Cursor Madrid Hackathon #3
 
 ### Ideas para el post (visual)
 
-1. **Carrusel (ideal):** foto del equipo **`DSC00963`** (Max + Dingli Ni Xu al finalizar) + 2–3 fotos del stand / gente jugando + 1 captura de **meme-ninja.dowi.es**.
-2. **Foto principal:** **`DSC00963`** (equipo al cierre) o portada de galería `DSC00856`.
+1. **Carrusel (ideal):** **`DSC00941`** (3.º puesto) → **`DSC00963`** (cierre) → stand / gameplay → captura **meme-ninja.dowi.es**.
+2. **Foto principal:** **`DSC00941`** si el post va al puesto; **`DSC00963`** si va al equipo; `DSC00856` como ambiente general.
 3. **Primera línea** del post = gancho (versión corta).
 4. **Enlaces:** galería + **https://meme-ninja.dowi.es**
 
@@ -217,8 +240,7 @@ https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00856.JPG
 - Récord en vivo: **Max — 7.600 pts**
 - **3.º puesto** en el hackathon
 
-**Imagen:** Collage de **2–3 fotos de la galería** (stand, reacciones, grupo).  
-Sugerencia: recorrer la galería y marcar las que muestren **MEME NINJA** en pantalla.
+**Imagen:** Incluir **`DSC00941`** (podio) en pequeño + fotos del stand donde salga **MEME NINJA** en pantalla.
 
 ---
 
@@ -280,9 +302,10 @@ Sugerencia: recorrer la galería y marcar las que muestren **MEME NINJA** en pan
 - Récord: **Max — 7.600**  
 - Juega: **meme-ninja.dowi.es**
 
-**Imagen:** **`DSC00963.JPG`** — Max y Dingli Ni Xu al finalizar el evento (foto a pantalla completa) + QR o URL **meme-ninja.dowi.es**.
+**Imagen:** **`DSC00941.JPG`** a pantalla completa — momento del **3.º puesto** (Max, Dingli Ni Xu y organización).  
+Pie de foto: “3.º puesto · MEME NINJA”. Añadir QR o URL **meme-ninja.dowi.es** en una esquina.
 
-https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00963.JPG
+https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00941.JPG
 
 ---
 
@@ -319,13 +342,13 @@ Enlace en pequeño: galería oficial.
 | 1 Portada | Portada / mejor general | `DSC00856` |
 | 2 Idea | Ambiente, venue | `DSC00616`, `DSC00625` |
 | 3 Cómo se juega | Gente + pantalla | *(elegir en galería)* + web |
-| 4 Evento | Stand MEME NINJA | *(elegir en galería)* |
 | 5 Arquitectura | Ambiente tech | `DSC00755` |
 | 6 Tech | Venue / comunidad | `DSC00861` |
 | 7 Detalles | — | Captura web |
-| 8 Resultado | Equipo al finalizar | **`DSC00963`** (Max + Dingli Ni Xu) |
-| 9 Gracias | Misma foto del equipo | **`DSC00963`** |
-| 10 Cierre | Equipo + CTA juego | **`DSC00963`** |
+| 4 Evento | Podio + stand | **`DSC00941`** + *(stand en galería)* |
+| 8 Resultado | **3.º puesto** | **`DSC00941`** (Max, Dingli Ni Xu + organización) |
+| 9 Gracias | Equipo al cierre | **`DSC00963`** |
+| 10 Cierre | Equipo + CTA juego | **`DSC00963`** (+ opcional mini `DSC00941`) |
 
 **Consejo:** 10 slides × ~1 min ≈ 10 minutos. Descarga las JPG en HD desde los enlaces de la galería o desde `photos.ekitaldi.org/.../DSCxxxxx.JPG`.
 
@@ -345,6 +368,7 @@ La cámara se usa en el navegador para jugar; el backend procesa frames para det
 | Juego (producción) | https://meme-ninja.dowi.es |
 | Repositorio | https://github.com/maxprain12/hackathon-fruitninja |
 | Portada HD | https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00856.JPG |
+| **3.º puesto (Max, Dingli Ni Xu + organización)** | https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00941.JPG |
 | **Equipo al cierre (Max + Dingli Ni Xu)** | https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00963.JPG |
 
 ---
