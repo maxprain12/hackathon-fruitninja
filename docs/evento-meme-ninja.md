@@ -172,7 +172,9 @@ La idea era simple y divertida: ¿y si Fruit Ninja fuera con memes de stream y t
 
 Te pones delante de la cámara, mueves la mano y una estela tipo sable corta emojis que van saltando por la pantalla. Cada partida es distinta: memes buenos y malos salen al azar; los prohibidos van en rojo para que no haya dudas.
 
-Lo mejor del evento no fue solo el código: fue ver a desconocidos pedir turno, jugar, reír cuando cortaban un meme bomba y mirar el ranking. Gracias a todos los que fueron tan participativos en nuestro stand.
+Lo mejor del evento no fue solo el código: fue ver a desconocidos pedir turno, jugar, reír cuando cortaban un meme bomba y mirar el ranking. En el stand, Max explicaba y Dingli Ni Xu enseñaba jugando en directo. Gracias a todos los que fueron tan participativos.
+
+📸 Demo en el stand: https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00864.JPG
 
 🏅 Resultado del hackathon: 3.º puesto.
 📸 Momento del podio: https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00941.JPG
