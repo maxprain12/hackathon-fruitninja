@@ -1,13 +1,18 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { EmoteLegend } from "@/components/EmoteLegend";
+import { BombWarningBar, EmoteLegendHub } from "@/components/EmoteLegend";
 import { GameCanvas } from "@/components/GameCanvas";
 import { GameControls } from "@/components/GameControls";
 import { GameHUD } from "@/components/GameHUD";
 import { LeaderboardPanel } from "@/components/LeaderboardPanel";
 import { resumeAudio } from "@/lib/game/audio";
-import { preloadEmotes } from "@/lib/game/emotes";
+import {
+  BOMB_EMOTES,
+  getRoundBombEmotes,
+  preloadEmotes,
+  type EmoteMeta,
+} from "@/lib/game/emotes";
 import {
   createGameState,
   resetGame,
@@ -27,11 +32,15 @@ const defaultHud: HudSnapshot = {
   score: 0,
   combo: 0,
   timeLeftSec: 60,
+  lives: 5,
+  maxLives: 5,
   playing: false,
   demo: true,
   connected: false,
   gameOver: false,
+  gameOverReason: null,
   comboPop: null,
+  lifeLostTaunt: null,
 };
 
 export function MemeNinjaGame() {
@@ -42,12 +51,14 @@ export function MemeNinjaGame() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const wsRef = useRef<WebSocket | null>(null);
   const stopPumpRef = useRef<(() => void) | null>(null);
-  const submittedRef = useRef(false);
-
   const [hud, setHud] = useState<HudSnapshot>(defaultHud);
   const [demo, setDemo] = useState(true);
   const [playerName, setPlayerName] = useState("");
   const [leaderboardKey, setLeaderboardKey] = useState(0);
+  const [saveStatus, setSaveStatus] = useState<
+    "idle" | "saving" | "saved" | "error"
+  >("idle");
+  const [roundBombs, setRoundBombs] = useState<EmoteMeta[]>(BOMB_EMOTES);
 
   useEffect(() => {
     if (engineRef.current) {
@@ -56,26 +67,32 @@ export function MemeNinjaGame() {
     void preloadEmotes();
   }, []);
 
-  useEffect(() => {
-    if (!hud.gameOver || submittedRef.current) return;
+  const handleSaveScore = useCallback(async () => {
+    if (saveStatus === "saving" || saveStatus === "saved") return;
+    setSaveStatus("saving");
     const name = playerName.trim() || "Anónimo";
-    submittedRef.current = true;
-    void submitScore(name, hud.score).then(() => {
+    const result = await submitScore(name, hud.score);
+    if (result) {
+      setSaveStatus("saved");
       setLeaderboardKey((k) => k + 1);
-    });
-  }, [hud.gameOver, hud.score, playerName]);
+    } else {
+      setSaveStatus("error");
+    }
+  }, [saveStatus, playerName, hud.score]);
 
-  const applyWrists = useCallback((player: PlayerWrists | null) => {
-    const engine = engineRef.current;
-    if (!engine) return;
-    const video = videoRef.current;
-    setPlayerWrists(
-      engine,
-      player,
-      video?.videoWidth,
-      video?.videoHeight,
-    );
-  }, []);
+  const applyWrists = useCallback(
+    (frame: { player: PlayerWrists | null; frameW: number; frameH: number }) => {
+      const engine = engineRef.current;
+      if (!engine) return;
+      const video = videoRef.current;
+      const videoW =
+        frame.frameW > 0 ? frame.frameW : (video?.videoWidth ?? 0);
+      const videoH =
+        frame.frameH > 0 ? frame.frameH : (video?.videoHeight ?? 0);
+      setPlayerWrists(engine, frame.player, videoW, videoH);
+    },
+    [],
+  );
 
   const disconnectCamera = useCallback(() => {
     stopPumpRef.current?.();
@@ -127,14 +144,21 @@ export function MemeNinjaGame() {
 
   const handleStart = useCallback(() => {
     resumeAudio();
-    submittedRef.current = false;
+    setSaveStatus("idle");
     if (engineRef.current) startRound(engineRef.current);
+    setRoundBombs(getRoundBombEmotes());
   }, []);
 
   const handleReset = useCallback(() => {
-    submittedRef.current = false;
+    setSaveStatus("idle");
     if (engineRef.current) resetGame(engineRef.current);
     if (wsRef.current) sendReset(wsRef.current);
+  }, []);
+
+  const handlePlayAgain = useCallback(() => {
+    setSaveStatus("idle");
+    if (engineRef.current) startRound(engineRef.current);
+    setRoundBombs(getRoundBombEmotes());
   }, []);
 
   const handleToggleCamera = useCallback(() => {
@@ -147,19 +171,33 @@ export function MemeNinjaGame() {
     return () => disconnectCamera();
   }, [disconnectCamera]);
 
+  const inRound = hud.playing && !hud.gameOver;
+
   return (
     <div className="relative h-screen w-screen overflow-hidden bg-[#040810]">
       <GameCanvas engineRef={engineRef} videoRef={videoRef} />
-      <GameHUD hud={hud} playerName={playerName.trim() || "Anónimo"} />
+      <GameHUD
+        hud={hud}
+        playerName={playerName}
+        saveStatus={saveStatus}
+        onPlayerNameChange={setPlayerName}
+        onSaveScore={() => void handleSaveScore()}
+        onPlayAgain={handlePlayAgain}
+      />
 
-      <div className="pointer-events-auto absolute left-4 top-4 z-20 flex w-56 flex-col gap-3 max-h-[calc(100vh-8rem)] overflow-y-auto">
-        <EmoteLegend />
-        <LeaderboardPanel refreshKey={leaderboardKey} />
-      </div>
+      {inRound && <BombWarningBar bombs={roundBombs} />}
+
+      {!inRound && (
+        <div className="pointer-events-auto absolute left-4 top-4 z-20 flex w-56 max-h-[calc(100vh-8rem)] flex-col gap-3 overflow-y-auto">
+          <EmoteLegendHub />
+          <LeaderboardPanel refreshKey={leaderboardKey} />
+        </div>
+      )}
 
       <GameControls
         demo={demo}
         playing={hud.playing}
+        gameOver={hud.gameOver}
         playerName={playerName}
         onPlayerNameChange={setPlayerName}
         onStart={handleStart}

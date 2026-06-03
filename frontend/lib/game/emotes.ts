@@ -1,4 +1,4 @@
-/** Emotes 7TV del filtro GraphQL (búsqueda global). */
+/** Emotes 7TV servidos en local desde /public/emotes (npm run download-emotes). */
 
 export interface EmoteMeta {
   id: string;
@@ -7,7 +7,7 @@ export interface EmoteMeta {
 }
 
 export function emoteUrl(id: string): string {
-  return `https://cdn.7tv.app/emote/${id}/4x.webp`;
+  return `/emotes/${id}.webp`;
 }
 
 /** Memes que suman puntos al cortarlos. */
@@ -38,7 +38,6 @@ export const GOOD_EMOTES: EmoteMeta[] = [
   { id: "01FX2XHBWR000FG2VJF7248SH9", name: "forsenPossesed", kind: "good" },
   { id: "01G2VQVAS0000EXSHAT1P4N2QH", name: "ApuConfused", kind: "good" },
   { id: "01FBPY09M00002VHTZH99A0HV9", name: "kekwdisco", kind: "good" },
-  { id: "01FNQ2B6PG000EJT2EVEY3EZ20", name: "UMAD", kind: "good" },
   { id: "01GX4N9X08000FRDHR6A82TGN3", name: "rvdSo", kind: "good" },
   { id: "01H5K52TJR0007SK9E6EYS5NF1", name: "peepoWar", kind: "good" },
   { id: "01HV4Y0S3G0007838DQ0AM87MF", name: "wideWalk", kind: "good" },
@@ -46,11 +45,9 @@ export const GOOD_EMOTES: EmoteMeta[] = [
   { id: "01GBE3RMJ8000E7PMG5MJNHPRT", name: "justinKelch", kind: "good" },
   { id: "01GAVG70T80007VXAFENF5KQSN", name: "MaDxHappy", kind: "good" },
   { id: "01F6MQNS4G000B6MDRT708FDV5", name: "upA", kind: "good" },
-  { id: "01G9ZQ86Z0000317G3ZPBYE60A", name: "HUH", kind: "good" },
   { id: "01H16S6ZS00000VMYJAHS8EBR9", name: "noLife", kind: "good" },
   { id: "01H3SGSGW0000BH97SCKY1C4N2", name: "lel", kind: "good" },
   { id: "01H4210YG0000D3PSG84TT3HJJ", name: "woas", kind: "good" },
-  { id: "01FDD9KK4G0003K4609T919YYX", name: "BRUH", kind: "good" },
   { id: "01FXVVB8XR000AY6WE2SPE81JE", name: "SiSi", kind: "good" },
   { id: "01G2VY1EM0000EXSHAT1P4N2ZR", name: "staree", kind: "good" },
   { id: "01F8DJ4VCR00056J6Z2TGS5BA9", name: "ApuSipSpin", kind: "good" },
@@ -78,13 +75,34 @@ export const GOOD_EMOTES: EmoteMeta[] = [
   { id: "01KMXZWX9C8FDPRG3VG36QKD5N", name: "scuba", kind: "good" },
 ];
 
-/** Bombas: restan puntos. chud también aparece en búsqueda pero aquí es penalización. */
+/** Bombas: restan puntos y vidas. */
 export const BOMB_EMOTES: EmoteMeta[] = [
   { id: "01KK3ZV02K136H3PXPDD2GJAZ0", name: "chud", kind: "bomb" },
   { id: "01HSCRRQBR0006X5PBHDB22PN5", name: "bomb", kind: "bomb" },
+  { id: "01FNQ2B6PG000EJT2EVEY3EZ20", name: "UMAD", kind: "bomb" },
+  { id: "01FDD9KK4G0003K4609T919YYX", name: "BRUH", kind: "bomb" },
+  { id: "01G9ZQ86Z0000317G3ZPBYE60A", name: "HUH", kind: "bomb" },
 ];
 
-/** Muestra en la leyenda (no todos los 60+ good). */
+const ALL_EMOTES = [...GOOD_EMOTES, ...BOMB_EMOTES];
+
+const BOMB_TAUNTS: Record<string, string> = {
+  chud: "¡JAJAJA! Te lo dije",
+  bomb: "¡BOOM! Una vida menos, genio",
+  UMAD: "¿Enfadado? Deberías estarlo",
+  BRUH: "BRUH… ¿en serio cortaste eso?",
+  HUH: "¿HUH? Eso era PROHIBIDO",
+};
+
+export function getEmoteMeta(id: string): EmoteMeta | undefined {
+  return ALL_EMOTES.find((e) => e.id === id);
+}
+
+export function getBombTauntMessage(name: string): string {
+  return BOMB_TAUNTS[name] ?? "¡Ups! Meme prohibido";
+}
+
+/** Muestra fija en SSR/hidratación; el menú baraja tras montar en cliente. */
 export const LEGEND_GOOD_SAMPLE = GOOD_EMOTES.slice(0, 8);
 
 const cache = new Map<string, HTMLImageElement>();
@@ -93,12 +111,65 @@ export function getEmoteImage(id: string): HTMLImageElement | undefined {
   return cache.get(id);
 }
 
+function shuffle<T>(items: readonly T[]): T[] {
+  const out = [...items];
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [out[i], out[j]] = [out[j], out[i]];
+  }
+  return out;
+}
+
+export interface RoundEmotePools {
+  good: EmoteMeta[];
+  bomb: EmoteMeta[];
+  bombChance: number;
+}
+
+let activeRound: RoundEmotePools | null = null;
+
+/** Baraja memes buenos y malos y ajusta la tasa de bombas para cada partida. */
+export function beginRoundEmotes(): RoundEmotePools {
+  const goodMin = Math.max(12, Math.floor(GOOD_EMOTES.length * 0.55));
+  const goodCount =
+    goodMin +
+    Math.floor(Math.random() * (GOOD_EMOTES.length - goodMin + 1));
+  const good = shuffle(GOOD_EMOTES).slice(0, goodCount);
+  const bomb = shuffle(BOMB_EMOTES);
+  const bombChance = 0.12 + Math.random() * 0.13;
+
+  activeRound = { good, bomb, bombChance };
+  return activeRound;
+}
+
+export function getRoundBombChance(): number {
+  return activeRound?.bombChance ?? 0.15;
+}
+
+export function getRoundBombEmotes(): EmoteMeta[] {
+  return activeRound?.bomb ?? BOMB_EMOTES;
+}
+
+/** Muestra en la leyenda una muestra distinta de memes buenos por visita al menú. */
+export function sampleLegendGoodEmotes(count = 8): EmoteMeta[] {
+  return shuffle(GOOD_EMOTES).slice(0, count);
+}
+
+function pickFromPool(pool: EmoteMeta[]): string {
+  if (pool.length === 0) {
+    return GOOD_EMOTES[Math.floor(Math.random() * GOOD_EMOTES.length)].id;
+  }
+  return pool[Math.floor(Math.random() * pool.length)].id;
+}
+
 export function pickGoodEmoteId(): string {
-  return GOOD_EMOTES[Math.floor(Math.random() * GOOD_EMOTES.length)].id;
+  const pool = activeRound?.good ?? GOOD_EMOTES;
+  return pickFromPool(pool);
 }
 
 export function pickBombEmoteId(): string {
-  return BOMB_EMOTES[Math.floor(Math.random() * BOMB_EMOTES.length)].id;
+  const pool = activeRound?.bomb ?? BOMB_EMOTES;
+  return pickFromPool(pool);
 }
 
 export async function preloadEmotes(): Promise<void> {
@@ -114,7 +185,6 @@ export async function preloadEmotes(): Promise<void> {
             return;
           }
           const img = new Image();
-          img.crossOrigin = "anonymous";
           img.onload = () => {
             cache.set(id, img);
             resolve();

@@ -1,3 +1,4 @@
+import { CONFIG } from "../config";
 import type { PlayerWrists, Vec2, WristSide } from "./types";
 
 const empty: PlayerWrists = { left: null, right: null };
@@ -7,7 +8,10 @@ export function createEmptyWrists(): PlayerWrists {
 }
 
 /** Si las muñecas están demasiado juntas, quedarse solo con la de mayor confianza */
-export function dedupeWrists(w: PlayerWrists, minDist = 0.035): PlayerWrists {
+export function dedupeWrists(
+  w: PlayerWrists,
+  minDist = CONFIG.WRIST_DEDUPE_MIN_DIST,
+): PlayerWrists {
   const { left, right } = w;
   if (!left || !right) return w;
 
@@ -32,9 +36,12 @@ export function smoothWrists(
     const p = prev[side];
     if (!r) return null;
     if (!p) return { ...r };
+    const conf = r.conf ?? 1;
+    const confScale = Math.min(1, conf / 0.55);
+    const a = alpha * confScale;
     return {
-      x: p.x + alpha * (r.x - p.x),
-      y: p.y + alpha * (r.y - p.y),
+      x: p.x + a * (r.x - p.x),
+      y: p.y + a * (r.y - p.y),
       conf: r.conf,
     };
   };

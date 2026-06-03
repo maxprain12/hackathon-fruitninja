@@ -64,11 +64,19 @@ export interface HudSnapshot {
   score: number;
   combo: number;
   timeLeftSec: number;
+  lives: number;
+  maxLives: number;
   playing: boolean;
   demo: boolean;
   connected: boolean;
   gameOver: boolean;
+  gameOverReason: "time" | "lives" | null;
   comboPop: string | null;
+  lifeLostTaunt: {
+    emoteId: string;
+    name: string;
+    message: string;
+  } | null;
 }
 
 export interface GameState {
@@ -80,6 +88,15 @@ export interface GameState {
   comboTimer: number;
   roundEndAt: number;
   gameOver: boolean;
+  gameOverReason: "time" | "lives" | null;
+  lives: number;
+  maxLives: number;
+  lifeLostTaunt: {
+    emoteId: string;
+    name: string;
+    message: string;
+    life: number;
+  } | null;
   memes: Meme[];
   halves: MemeHalf[];
   particles: Particle[];

@@ -12,7 +12,11 @@ import {
   type WristVelocity,
 } from "./wristSmoothing";
 import {
+  beginRoundEmotes,
   getEmoteImage,
+  getBombTauntMessage,
+  getEmoteMeta,
+  getRoundBombChance,
   pickBombEmoteId,
   pickGoodEmoteId,
 } from "./emotes";
@@ -36,6 +40,10 @@ export function createGameState(): GameState {
     comboTimer: 0,
     roundEndAt: 0,
     gameOver: false,
+    gameOverReason: null,
+    lives: CONFIG.STARTING_LIVES,
+    maxLives: CONFIG.STARTING_LIVES,
+    lifeLostTaunt: null,
     memes: [],
     halves: [],
     particles: [],
@@ -67,7 +75,7 @@ function cloneWrists(w: PlayerWrists): PlayerWrists {
 }
 
 function pickEmote(): { emoteId: string; kind: MemeKind } {
-  if (Math.random() < CONFIG.BOMB_CHANCE) {
+  if (Math.random() < getRoundBombChance()) {
     return { emoteId: pickBombEmoteId(), kind: "bomb" };
   }
   return { emoteId: pickGoodEmoteId(), kind: "good" };
@@ -156,7 +164,24 @@ function processCut(state: GameState, meme: Meme, side: WristSide) {
     state.comboTimer = 0;
     state.flashRed = 1;
     bombSound();
-    state.comboPop = { text: "BOOM!", life: 1.2 };
+    state.lives = Math.max(0, state.lives - 1);
+
+    const meta = getEmoteMeta(meme.emoteId);
+    const name = meta?.name ?? "???";
+    state.lifeLostTaunt = {
+      emoteId: meme.emoteId,
+      name,
+      message: getBombTauntMessage(name),
+      life: CONFIG.LIFE_LOST_TAUNT_MS / 1000,
+    };
+    state.comboPop = { text: "¡-1 VIDA!", life: 1.2 };
+
+    if (state.lives <= 0) {
+      state.playing = false;
+      state.gameOver = true;
+      state.gameOverReason = "lives";
+      gameOverSound();
+    }
     return;
   }
 
@@ -186,12 +211,23 @@ function hudSnapshot(state: GameState): HudSnapshot {
     score: state.score,
     combo: state.combo,
     timeLeftSec,
+    lives: state.lives,
+    maxLives: state.maxLives,
     playing: state.playing,
     demo: state.demo,
     connected: state.connected,
     gameOver: state.gameOver,
+    gameOverReason: state.gameOverReason,
     comboPop:
       state.comboPop && state.comboPop.life > 0 ? state.comboPop.text : null,
+    lifeLostTaunt:
+      state.lifeLostTaunt && state.lifeLostTaunt.life > 0
+        ? {
+            emoteId: state.lifeLostTaunt.emoteId,
+            name: state.lifeLostTaunt.name,
+            message: state.lifeLostTaunt.message,
+          }
+        : null,
   };
 }
 
@@ -262,8 +298,13 @@ export function setVideoSize(state: GameState, videoW: number, videoH: number) {
 }
 
 export function startRound(state: GameState) {
+  beginRoundEmotes();
   state.playing = true;
   state.gameOver = false;
+  state.gameOverReason = null;
+  state.lives = CONFIG.STARTING_LIVES;
+  state.maxLives = CONFIG.STARTING_LIVES;
+  state.lifeLostTaunt = null;
   state.score = 0;
   state.combo = 0;
   state.comboTimer = 0;
@@ -283,6 +324,9 @@ export function startRound(state: GameState) {
 export function resetGame(state: GameState) {
   state.playing = false;
   state.gameOver = false;
+  state.gameOverReason = null;
+  state.lives = CONFIG.STARTING_LIVES;
+  state.lifeLostTaunt = null;
   state.score = 0;
   state.combo = 0;
   state.memes = [];
@@ -320,6 +364,7 @@ export function tick(state: GameState, now: number) {
     if (now >= state.roundEndAt) {
       state.playing = false;
       state.gameOver = true;
+      state.gameOverReason = "time";
       gameOverSound();
       emitHud(state);
     }
@@ -340,7 +385,7 @@ export function tick(state: GameState, now: number) {
     const elapsed = CONFIG.ROUND_DURATION_MS - (state.roundEndAt - now);
     state.spawnInterval = Math.max(
       CONFIG.MIN_SPAWN_INTERVAL_MS,
-      CONFIG.SPAWN_INTERVAL_MS - elapsed * 0.0003,
+      CONFIG.SPAWN_INTERVAL_MS - elapsed * 0.00018,
     );
 
     if (now - state.lastSpawnAt >= state.spawnInterval) {
@@ -386,6 +431,7 @@ export function tick(state: GameState, now: number) {
 
   if (state.flashRed > 0) state.flashRed -= 0.05;
   if (state.comboPop) state.comboPop.life -= 0.016;
+  if (state.lifeLostTaunt) state.lifeLostTaunt.life -= 0.016;
 
   emitHud(state);
 }
@@ -426,6 +472,14 @@ function drawTrail(ctx: CanvasRenderingContext2D, state: GameState) {
   }
 }
 
+function bombShakeOffset(t: number): { dx: number; dy: number; extraRot: number } {
+  return {
+    dx: Math.sin(t * 0.028) * 7 + Math.sin(t * 0.047) * 4,
+    dy: Math.cos(t * 0.034) * 7 + Math.cos(t * 0.021) * 4,
+    extraRot: Math.sin(t * 0.04) * 0.12,
+  };
+}
+
 function drawEmote(
   ctx: CanvasRenderingContext2D,
   state: GameState,
@@ -436,15 +490,23 @@ function drawEmote(
   rotation: number,
   alpha = 1,
   clipSide?: "left" | "right",
+  kind: MemeKind = "good",
 ) {
   const { px, py } = normToPx(state, x, y);
   const size = radius * state.canvasW * 2.2;
   const img = getEmoteImage(emoteId);
+  const isBomb = kind === "bomb";
+  const shake = isBomb ? bombShakeOffset(state.time) : null;
 
   ctx.save();
   ctx.globalAlpha = alpha;
   ctx.translate(px, py);
-  ctx.rotate(rotation);
+  if (shake) {
+    ctx.translate(shake.dx, shake.dy);
+    ctx.rotate(rotation + shake.extraRot);
+  } else {
+    ctx.rotate(rotation);
+  }
 
   if (clipSide === "left") {
     ctx.beginPath();
@@ -456,12 +518,35 @@ function drawEmote(
     ctx.clip();
   }
 
+  if (isBomb) {
+    const pulse = 0.55 + Math.sin(state.time * 0.014) * 0.2;
+    ctx.beginPath();
+    ctx.arc(0, 0, size * 0.58, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(255, 0, 0, ${pulse * 0.35})`;
+    ctx.fill();
+    ctx.strokeStyle = `rgba(255, 40, 40, ${0.75 + Math.sin(state.time * 0.018) * 0.2})`;
+    ctx.lineWidth = 4 + Math.sin(state.time * 0.012) * 1.5;
+    ctx.stroke();
+  }
+
   if (img?.complete && img.naturalWidth > 0) {
-    ctx.shadowColor = "rgba(255,255,255,0.35)";
-    ctx.shadowBlur = 14;
+    if (isBomb) {
+      const pulse = 18 + Math.sin(state.time * 0.012) * 12;
+      ctx.shadowColor = "rgba(255, 0, 0, 1)";
+      ctx.shadowBlur = pulse;
+    } else {
+      ctx.shadowColor = "rgba(255,255,255,0.35)";
+      ctx.shadowBlur = 14;
+    }
     ctx.drawImage(img, -size / 2, -size / 2, size, size);
+    if (isBomb) {
+      ctx.globalCompositeOperation = "source-atop";
+      ctx.fillStyle = "rgba(255, 0, 0, 0.48)";
+      ctx.fillRect(-size / 2, -size / 2, size, size);
+      ctx.globalCompositeOperation = "source-over";
+    }
   } else {
-    ctx.fillStyle = "#ff00aa";
+    ctx.fillStyle = isBomb ? "#ff2020" : "#ff00aa";
     ctx.beginPath();
     ctx.arc(0, 0, size * 0.35, 0, Math.PI * 2);
     ctx.fill();
@@ -504,6 +589,9 @@ export function draw(ctx: CanvasRenderingContext2D, state: GameState) {
       meme.y,
       meme.radius,
       meme.rotation,
+      1,
+      undefined,
+      meme.kind,
     );
   }
 
@@ -518,6 +606,7 @@ export function draw(ctx: CanvasRenderingContext2D, state: GameState) {
       h.rotation,
       h.life,
       h.clipSide,
+      h.kind,
     );
   }
 

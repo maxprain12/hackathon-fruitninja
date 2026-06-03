@@ -29,8 +29,11 @@ MODEL = LibreYOLO("LibreYOLONASn-pose.pt")
 
 LEFT_WRIST_IDX = 9
 RIGHT_WRIST_IDX = 10
-MIN_WRIST_CONF = 0.32
+# Umbral de confianza de keypoint (más alto = solo muñecas fiables, menos deriva)
+MIN_WRIST_CONF = 0.50
 MIN_WRIST_SEP = 0.04
+# Confianza mínima de detección de persona en el modelo
+POSE_DET_CONF = 0.40
 
 _cors = os.environ.get(
     "CORS_ORIGINS",
@@ -176,7 +179,9 @@ async def ws_endpoint(ws: WebSocket):
                 frame = pending
                 pending = None
                 h, w = frame.shape[:2]
-                results = await asyncio.to_thread(MODEL, frame)
+                results = await asyncio.to_thread(
+                    MODEL, frame, conf=POSE_DET_CONF
+                )
                 player = pick_player_wrists(results, w, h)
                 await ws.send_text(
                     json.dumps({"w": w, "h": h, "player": player})

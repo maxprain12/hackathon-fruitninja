@@ -3,6 +3,7 @@
 interface GameControlsProps {
   demo: boolean;
   playing: boolean;
+  gameOver: boolean;
   playerName: string;
   onPlayerNameChange: (name: string) => void;
   onStart: () => void;
@@ -13,27 +14,32 @@ interface GameControlsProps {
 export function GameControls({
   demo,
   playing,
+  gameOver,
   playerName,
   onPlayerNameChange,
   onStart,
   onReset,
   onToggleCamera,
 }: GameControlsProps) {
+  const showSetup = !playing || gameOver;
+
   return (
     <div className="absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 flex-wrap items-center justify-center gap-3 rounded-2xl border border-[rgba(0,229,255,0.3)] bg-[rgba(4,12,24,0.75)] px-4 py-3 backdrop-blur-md">
-      <label className="flex items-center gap-2">
-        <span className="font-body text-xs uppercase tracking-wide text-[#7ae8ff]">
-          Jugador
-        </span>
-        <input
-          type="text"
-          value={playerName}
-          onChange={(e) => onPlayerNameChange(e.target.value)}
-          maxLength={32}
-          placeholder="Tu nombre"
-          className="w-36 rounded-lg border border-[rgba(0,229,255,0.35)] bg-black/40 px-3 py-2 font-body text-sm text-white placeholder:text-zinc-500 focus:border-[#00e5ff] focus:outline-none"
-        />
-      </label>
+      {showSetup && (
+        <label className="flex items-center gap-2">
+          <span className="font-body text-xs uppercase tracking-wide text-[#7ae8ff]">
+            Jugador
+          </span>
+          <input
+            type="text"
+            value={playerName}
+            onChange={(e) => onPlayerNameChange(e.target.value)}
+            maxLength={32}
+            placeholder="Tu nombre"
+            className="w-36 rounded-lg border border-[rgba(0,229,255,0.35)] bg-black/40 px-3 py-2 font-body text-sm text-white placeholder:text-zinc-500 focus:border-[#00e5ff] focus:outline-none"
+          />
+        </label>
+      )}
       <button
         type="button"
         onClick={onStart}

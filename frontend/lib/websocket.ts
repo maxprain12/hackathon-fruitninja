@@ -6,8 +6,14 @@ export interface WsConnection {
   close: () => void;
 }
 
+export interface WristFrame {
+  player: PlayerWrists | null;
+  frameW: number;
+  frameH: number;
+}
+
 export function connectWebSocket(
-  onWrists: (player: PlayerWrists | null) => void,
+  onWrists: (frame: WristFrame) => void,
   onDisconnected: () => void,
 ): Promise<WebSocket> {
   return new Promise((resolve, reject) => {
@@ -21,8 +27,14 @@ export function connectWebSocket(
       try {
         const data = JSON.parse(ev.data as string) as {
           player: PlayerWrists | null;
+          w?: number;
+          h?: number;
         };
-        onWrists(data.player);
+        onWrists({
+          player: data.player,
+          frameW: data.w ?? 0,
+          frameH: data.h ?? 0,
+        });
       } catch {
         /* ignore malformed */
       }

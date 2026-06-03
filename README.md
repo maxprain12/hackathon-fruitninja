@@ -67,6 +67,7 @@ Arranca en **modo demo** con muñeca simulada. Pulsa **▶ Empezar ronda** para 
 
 ## Ajustes en vivo
 
-- `MIN_WRIST_CONF` en `backend/server.py` — sube si hay falsos positivos
+- `MIN_WRIST_CONF` / `POSE_DET_CONF` en `backend/server.py` — sube si hay falsos positivos; baja si pierde la mano
+- `EMA_ALPHA` / `WRIST_EXTRAP_MS` en `frontend/lib/config.ts` — sube alpha o baja extrap para seguir la muñeca con menos retardo
 - `CUT_SPEED_THRESHOLD` en `frontend/lib/config.ts` — baja si cuesta cortar
 - `PUMP_INTERVAL_MS` — sube si la CPU va justa (menos fps, más estable)
