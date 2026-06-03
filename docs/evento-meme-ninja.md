@@ -5,6 +5,50 @@ Juego en vivo: **https://meme-ninja.dowi.es**
 
 ---
 
+## Galería oficial del hackathon (usa estas fotos)
+
+**Cursor Madrid Hackathon #3** tiene **103 fotos profesionales** publicadas por la organización.  
+Son la base visual principal para LinkedIn, la PPT y cualquier post del proyecto.
+
+| | |
+|---|---|
+| **Abrir galería** | [Cursor Madrid Hackathon #3 — Ekitaldi](https://www.ekitaldi.org/gallery/cmpxqrwsb0000141ipeqptui7?referrer=luma&utm_source=luma) |
+| **Fotos** | 103 imágenes en alta resolución |
+| **Portada de la galería** | `DSC00856.JPG` |
+
+> Si en tu red no cargan las miniaturas (bloqueo puntual del CDN de fotos), abre el enlace en otro momento, con datos móviles o VPN. Las URLs de descarga directa siguen siendo válidas.
+
+### Portada recomendada (LinkedIn / slide 1)
+
+![Portada oficial — Cursor Madrid Hackathon #3](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/thumbs/DSC00856.JPG.webp)
+
+**Descarga en alta calidad:**  
+https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00856.JPG
+
+### Mosaico del ambiente del evento
+
+Abre la galería y **elige las fotos donde salga vuestro stand, la pantalla con MEME NINJA o gente jugando**.  
+De referencia, estas capturas reparten el día (inicio → mitad → cierre):
+
+| | | |
+|:---:|:---:|:---:|
+| ![DSC00616](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/thumbs/DSC00616.JPG.webp) | ![DSC00661](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/thumbs/DSC00661.JPG.webp) | ![DSC00686](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/thumbs/DSC00686.JPG.webp) |
+| ![DSC00755](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/thumbs/DSC00755.JPG.webp) | ![DSC00861](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/thumbs/DSC00861.JPG.webp) | ![DSC00941](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/thumbs/DSC00941.JPG.webp) |
+
+**Enlaces HD** (arrastrar a PowerPoint o “Insertar imagen”):
+
+- [DSC00616.JPG](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00616.JPG)
+- [DSC00661.JPG](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00661.JPG)
+- [DSC00686.JPG](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00686.JPG)
+- [DSC00755.JPG](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00755.JPG)
+- [DSC00861.JPG](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00861.JPG)
+- [DSC00941.JPG](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00941.JPG)
+- [DSC00972.JPG](https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00972.JPG) *(cierre del reportaje)*
+
+**Complemento opcional:** 1 captura de **https://meme-ninja.dowi.es** (puntuación o leaderboard con récord **Max — 7.600**) para la slide del reto.
+
+---
+
 ## En una frase
 
 **MEME NINJA** es Fruit Ninja con memes de Twitch: te ves en cámara, mueves la mano como un sable y cortas emojis que vuelan por la pantalla. Los memes buenos suman puntos; los rojos (prohibidos) te quitan vidas si los cortas.
@@ -13,7 +57,7 @@ Juego en vivo: **https://meme-ninja.dowi.es**
 
 ## Agradecimientos y cierre del evento
 
-Queremos dar las gracias de corazón a **Cursor Community Madrid** por organizar el **Hackathon #3**: ambiente, energía y gente con ganas de construir en serio.
+Queremos dar las gracias de corazón a **Cursor Community Madrid** por organizar el **Hackathon #3**: ambiente, energía y gente con ganas de construir en serio — y por dejarnos **este reportaje fotográfico** del evento.
 
 Un agradecimiento especial a **Xuban** por el apoyo, la orientación y el empujón durante el reto.
 
@@ -53,6 +97,9 @@ Construimos un arcade en el que cortas emotes de Twitch como si fueran frutas: l
 🏅 Quedamos 3.º en el evento.
 Gracias a Cursor Community Madrid y a Xuban — el hackathon estuvo muy guay y la gente del stand se lo pasó genial probándolo.
 
+📸 Fotos oficiales del hackathon (103):
+https://www.ekitaldi.org/gallery/cmpxqrwsb0000141ipeqptui7
+
 🔥 Récord actual: Max — 7.600 puntos.
 ¿Lo superas? 👉 https://meme-ninja.dowi.es
 
@@ -73,6 +120,9 @@ Lo mejor del evento no fue solo el código: fue ver a desconocidos pedir turno, 
 🏅 Resultado del hackathon: 3.º puesto.
 🙏 Gracias a Cursor Community Madrid y a Xuban por el evento (estuvo muy guay) y por el ambiente.
 
+📷 Galería oficial del hackathon — más de 100 fotos del día:
+https://www.ekitaldi.org/gallery/cmpxqrwsb0000141ipeqptui7
+
 El juego ya está online para quien no pudo probarlo allí:
 👉 https://meme-ninja.dowi.es
 
@@ -83,17 +133,20 @@ Equipo MEME NINJA · Cursor Madrid Hackathon #3
 #Cursor #Hackathon #Madrid #IndieGame #ComputerVision #NextJS
 ```
 
-### Ideas para el post (opcional)
+### Ideas para el post (visual)
 
-- **Foto o vídeo:** 10–15 s cortando memes en el stand o pantallazo del leaderboard con el récord de Max.
-- **Primera línea** del post = gancho (ya está en la versión corta).
-- **Enlace** siempre visible: https://meme-ninja.dowi.es
+1. **Carrusel (ideal):** 3–5 fotos de la [galería oficial](https://www.ekitaldi.org/gallery/cmpxqrwsb0000141ipeqptui7?referrer=luma&utm_source=luma) donde se vea el stand / gente jugando + 1 captura del juego online.
+2. **Foto principal:** portada de la galería (`DSC00856`) o la mejor foto vuestra del stand dentro de las 103.
+3. **Primera línea** del post = gancho (versión corta).
+4. **Enlaces:** galería + **https://meme-ninja.dowi.es**
 
 ---
 
 # Parte 2 — Guion para PPT (presentación)
 
-Usa este índice slide a slide. En cada diapositiva se indica **texto en pantalla** y **qué imagen o vídeo poner** (capturas del repo, del evento o de la web desplegada).
+Prioridad visual: **fotos de la galería Ekitaldi** + una o dos capturas de la web del juego.
+
+**Galería:** https://www.ekitaldi.org/gallery/cmpxqrwsb0000141ipeqptui7?referrer=luma&utm_source=luma
 
 ---
 
@@ -103,8 +156,12 @@ Usa este índice slide a slide. En cada diapositiva se indica **texto en pantall
 **Subtítulo:** Cursor Madrid Hackathon #3 · 3.º puesto  
 **Pie:** https://meme-ninja.dowi.es  
 
-**Imagen:** Logo o captura hero del juego (título “MEME NINJA” + puntuación grande).  
-**Notas del presentador:** “Fruit Ninja con memes y la cámara como mando.”
+**Imagen (prioridad 1):** Portada de la galería — `DSC00856.JPG`  
+https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00856.JPG  
+
+**Imagen (prioridad 2):** Vuestra mejor foto del stand (buscar en la galería entre las 103).  
+
+**Notas del presentador:** “Fruit Ninja con memes y la cámara como mando. Fotos oficiales del hackathon.”
 
 ---
 
@@ -114,8 +171,8 @@ Usa este índice slide a slide. En cada diapositiva se indica **texto en pantall
 - ¿Y si el clásico de cortar frutas fuera con cultura de internet?
 - Un juego que se entienda en 5 segundos y enganche en un stand
 
-**Imagen:** Mockup o foto de alguien jugando con los brazos en el aire.  
-**Opcional:** GIF corto de un corte con explosión de partículas.
+**Imagen:** Foto de la galería con **público o ambiente del venue** (p. ej. `DSC00616`, `DSC00625` — revisar en la galería).  
+**Opcional:** captura del gameplay en **meme-ninja.dowi.es**.
 
 ---
 
@@ -129,20 +186,22 @@ Usa este índice slide a slide. En cada diapositiva se indica **texto en pantall
 5. **Evita** memes rojos → pierdes vidas y puntos.
 6. Tu nombre queda en el **leaderboard**.
 
-**Imagen:** 2–3 capturas: menú con leyenda, partida en curso, game over con puntuación.  
-**Fuente:** https://meme-ninja.dowi.es
+**Imagen:**  
+- **Izquierda:** foto de la galería con alguien jugando / pantalla (elegir en Ekitaldi).  
+- **Derecha:** captura web (menú, partida o game over).  
 
 ---
 
-### Slide 4 — Lo que viste en el evento
+### Slide 4 — Lo que pasó en el evento
 
 **Texto:**
-- Stand con cola de gente probando el juego
+- Stand con gente probando el juego
 - Partidas distintas cada vez (memes al azar)
 - Récord en vivo: **Max — 7.600 pts**
+- **3.º puesto** en el hackathon
 
-**Imagen:** Foto del equipo / del stand / pantalla con público (si tenéis).  
-**Si no hay foto:** captura del leaderboard online.
+**Imagen:** Collage de **2–3 fotos de la galería** (stand, reacciones, grupo).  
+Sugerencia: recorrer la galería y marcar las que muestren **MEME NINJA** en pantalla.
 
 ---
 
@@ -157,32 +216,29 @@ Usa este índice slide a slide. En cada diapositiva se indica **texto en pantall
 | **Motor del juego** | Memes, física, puntos, vidas, sonidos |
 | **Ranking** | Guarda las mejores puntuaciones |
 
-**Imagen:** Esquema simple (tres cajas): *Tú + cámara* → *Detección de mano* → *Pantalla de juego*.
+**Imagen:** Esquema simple en PowerPoint (tres cajas) + foto pequeña del evento en una esquina (`DSC00755` o similar de ambiente).
 
 ```
    [ Jugador ]     [ Cámara ]     [ Juego en pantalla ]
         │              │                    │
         └──────────────┴────────────────────┘
-                    "Solo coordenadas de la mano,
-                     no guardamos vídeo"
+              "Solo coordenadas de la mano"
 ```
 
 ---
 
 ### Slide 6 — Tecnologías (lenguaje claro)
 
-**Texto en pantalla (bullets cortos):**
-
+**Texto:**
 - **Cursor** — desarrollo asistido y ritmo del hackathon  
 - **Next.js** — la aplicación web del juego  
 - **LibreYOLO (pose)** — detecta muñecas en tiempo real  
-- **Python + WebSockets** — el backend que habla con la cámara  
-- **Canvas** — dibujo fluido del juego (estela, memes, efectos)  
-- **Emotes 7TV** — catálogo de memes locales en el proyecto  
-- **Despliegue** — juego público en **meme-ninja.dowi.es**
+- **Python + WebSockets** — backend con la cámara  
+- **Canvas** — estela, memes y efectos  
+- **Emotes 7TV** — memes del proyecto  
+- **Online:** **meme-ninja.dowi.es**
 
-**Imagen:** Logos en fila (Cursor, Next.js, Python) + captura del juego.  
-**Nota:** No hace falta entrar en detalle de código; basta con “visión por computador + web en tiempo real”.
+**Imagen:** Logos (Cursor, Next.js, Python) + foto de la galería del **venue / hackathon** (`DSC00861` o la que mejor represente “tech event”).
 
 ---
 
@@ -190,69 +246,73 @@ Usa este índice slide a slide. En cada diapositiva se indica **texto en pantall
 
 **Texto:**
 - Memes **buenos** vs **prohibidos** (siempre en **rojo**)
-- Cada partida **baraja** qué memes salen
-- **Combos** y feedback visual / sonoro al cortar
-- Modo **demo** si no hay cámara o backend
-- Ajustes finos para que la mano **no se sienta lenta**
+- Cada partida **baraja** memes
+- **Combos** y feedback al cortar
+- Modo **demo** sin cámara
+- Mano **rápida** y precisa
 
-**Imagen:** Captura de un meme bomba con borde rojo + barra “No cortar”.
+**Imagen:** Captura web (meme rojo + barra “No cortar”).  
+**Fondo opcional:** foto de la galería desenfocada.
 
 ---
 
-### Slide 8 — Resultado y métricas humanas
+### Slide 8 — Resultado + reto
 
 **Texto:**
-- 🏅 **3.º puesto** en el hackathon  
-- Muchas partidas en el stand  
-- Récord actual: **7.600** (Max)  
-- Proyecto **online** para seguir jugando  
+- 🏅 **3.º puesto**  
+- Récord: **Max — 7.600**  
+- Juega: **meme-ninja.dowi.es**
 
-**Imagen:** Podio (icono) + QR o URL grande: **meme-ninja.dowi.es**
+**Imagen:** Foto de la galería tipo **celebración / grupo / clausura** (`DSC00941`, `DSC00972`) + QR o URL grande.
 
 ---
 
 ### Slide 9 — Agradecimientos
 
 **Texto:**
-- **Cursor Community Madrid** — por el Hackathon #3  
-- **Xuban** — por el apoyo en el evento  
-- **Público y jugadores** — por participar y animar el stand  
-- “El evento estuvo **muy guay**; gracias por hacerlo posible.”
+- **Cursor Community Madrid** — Hackathon #3 y galería de fotos  
+- **Xuban** — apoyo en el evento  
+- **Jugadores y público** — por participar en el stand  
+- “El evento estuvo **muy guay**.”
 
-**Imagen:** Foto grupal del evento o logo Cursor Madrid.
+**Imagen:** Foto grupal o de ambiente de la **galería Ekitaldi** (la más emotiva que encontréis).  
+Enlace en pequeño: galería oficial.
 
 ---
 
-### Slide 10 — Cierre + llamada a la acción
+### Slide 10 — Cierre
 
 **Texto:**
-- Juega ahora: **https://meme-ninja.dowi.es**
-- Supera **7.600** puntos y cuéntanoslo
-- Repo / contacto del equipo *(añadir si queréis)*
+- Juega: **https://meme-ninja.dowi.es**
+- Fotos del evento: **galería Ekitaldi** (enlace arriba)
+- Supera **7.600** puntos
 
-**Imagen:** Misma captalla de la portada o vídeo loop de 5 s del gameplay.
+**Imagen:** Misma portada `DSC00856` o collage galería + logo MEME NINJA.
 
 ---
 
-## Banco de imágenes sugerido (para la PPT)
+## Mapa rápido: slide → foto de la galería
 
-| Uso | Qué capturar |
-|-----|----------------|
-| Portada / cierre | Pantalla inicio o mitad de partida con score alto |
-| Gameplay | Mano cortando meme + estela neón |
-| Memes malos | Meme con halo rojo en juego + leyenda “No cortar” |
-| Leaderboard | Tabla con **Max — 7600** arriba |
-| Arquitectura | Diagrama de 3 cajas (slide 5) — se puede dibujar en PowerPoint |
-| Evento | Fotos reales del stand (si las tenéis) |
-| Tech | Logos: Cursor, Next.js, Python |
+| Slide | Tipo de foto en Ekitaldi | Archivos de partida |
+|-------|--------------------------|---------------------|
+| 1 Portada | Portada / mejor general | `DSC00856` |
+| 2 Idea | Ambiente, venue | `DSC00616`, `DSC00625` |
+| 3 Cómo se juega | Gente + pantalla | *(elegir en galería)* + web |
+| 4 Evento | Stand MEME NINJA | *(elegir en galería)* |
+| 5 Arquitectura | Ambiente tech | `DSC00755` |
+| 6 Tech | Venue / comunidad | `DSC00861` |
+| 7 Detalles | — | Captura web |
+| 8 Resultado | Grupo / final | `DSC00941`, `DSC00972` |
+| 9 Gracias | Grupo / comunidad | *(elegir en galería)* |
+| 10 Cierre | Portada o collage | `DSC00856` |
 
-**Consejo:** 10 slides, ~1 minuto por slide = presentación de unos 10 minutos.
+**Consejo:** 10 slides × ~1 min ≈ 10 minutos. Descarga las JPG en HD desde los enlaces de la galería o desde `photos.ekitaldi.org/.../DSCxxxxx.JPG`.
 
 ---
 
 ## Texto legal / privacidad (una línea para Q&A)
 
-La cámara se usa en el navegador para jugar; el backend procesa frames para detectar la posición de las muñecas y **no necesita guardar vídeo** para el ranking. *(Ajustad según vuestra política real de despliegue.)*
+La cámara se usa en el navegador para jugar; el backend procesa frames para detectar la posición de las muñecas. Las fotos del evento son de la galería oficial del hackathon; el juego online tiene su propia política de despliegue.
 
 ---
 
@@ -260,9 +320,11 @@ La cámara se usa en el navegador para jugar; el backend procesa frames para det
 
 | Recurso | URL |
 |---------|-----|
+| **Galería oficial (103 fotos)** | https://www.ekitaldi.org/gallery/cmpxqrwsb0000141ipeqptui7?referrer=luma&utm_source=luma |
 | Juego (producción) | https://meme-ninja.dowi.es |
 | Repositorio | https://github.com/maxprain12/hackathon-fruitninja |
+| Portada HD | https://photos.ekitaldi.org/galleries/cmpxqrwsb0000141ipeqptui7/DSC00856.JPG |
 
 ---
 
-*Documento generado para el equipo MEME NINJA · Cursor Madrid Hackathon #3*
+*Documento para el equipo MEME NINJA · Cursor Madrid Hackathon #3 · Fotos: Ekitaldi / Cursor Community Madrid*
